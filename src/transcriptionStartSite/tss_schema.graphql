@@ -1,0 +1,30 @@
+type TranscriptionStartSite {
+    _id: String
+    chromosome: String
+    leftEndPosition: Int
+    rightEndPosition: Int
+    pos_1: Int
+    strand: String
+    tssClosestGenes: TSSClosestGenes
+    promoter: Promoter
+    datasetIds: [String]
+}
+
+type TSSClosestGenes {
+    _id: String
+    name: String
+}
+
+type Promoter {
+    _id: String
+    name: String
+    strand: String
+    pos1: Number
+    sigma: String
+    confidenceLevel: String
+}
+
+type Query {
+    getTSSByID(_id: String): TranscriptionStartSite
+    getAllTransUnitsOfDataset(datasetIds: String): [TranscriptionStartSite]
+}

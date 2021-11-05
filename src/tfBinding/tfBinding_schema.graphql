@@ -1,0 +1,141 @@
+"""
+_
+"""
+type DatasetTFBinding {
+    """
+    _
+    """
+    siteId: String
+    """
+    _
+    """
+    chromosome: String
+    """
+    _
+    """
+    chrLeftPosition: Int
+    """
+    _
+    """
+    chrRightPosition: Int
+    """
+    _
+    """
+    closestGenes: [TFClosestGenes]
+    """
+    _
+    """
+    transcriptionUnit: simpleItemObject
+    """
+    _
+    """
+    foundClassicRIs: [RIObjectType]
+    """
+    _
+    """
+    foundDatasetRIs: [RIObjectType]
+    """
+    _
+    """
+    name: String
+    """
+    _
+    """
+    score: Float
+    """
+    _
+    """
+    strand: String
+    """
+    _
+    """
+    sequence: String
+    """
+    _
+    """
+    datasetIds: [String]
+}
+
+"""
+_
+"""
+type RIObjectType {
+    """
+    _
+    """
+    tfbsLeftPosition: Int
+    """
+    _
+    """
+    tfbsRightPosition: Int
+    """
+    _
+    """
+    relativeGeneDistance: Int
+    """
+    _
+    """
+    relativeTSSDistance: Int
+    """
+    _
+    """
+    strand: String
+    """
+    _
+    """
+    sequence: String
+}
+
+"""
+_
+"""
+type TFClosestGenes {
+    """
+    _
+    """
+    _id: String
+    """
+    _
+    """
+    name: String
+	"""
+	_
+	"""
+	distanceTo: Int
+}
+
+type Query {
+    """
+    #### Type
+    Data
+    #### Service
+    HT TFBinding
+    #### Name
+    getAllPeaksOfDataset
+    #### Description
+    Gets all tfBinding docs associated to datasetID
+    #### Example
+    ```json
+    {
+        getAllTFBindingOfDataset(datasetId:"")
+        {
+            _id
+            closestGenes {
+                _id
+                name
+                distanceTo
+            }
+            datasetIds
+        }
+    }
+    ```
+    """
+    getAllTFBindingOfDataset(
+    """
+    #### Description
+    Id of the dataset associated to TFBinding
+    #### Required
+    Required
+    """
+    datasetId: String): [DatasetTFBinding]
+}

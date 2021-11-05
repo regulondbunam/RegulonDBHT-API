@@ -1,0 +1,95 @@
+"""
+_
+"""
+type Peaks {
+    """
+    _
+    """
+    _id: String
+    """
+    _
+    """
+    closestGenes: [PeaksClosestGenes]
+    """
+    _
+    """
+    chromosome: String
+    """
+    _
+    """
+    peakLeftPosition: Int
+    """
+    _
+    """
+    peakRightPosition: Int
+    """
+    _
+    """
+    score: Float
+    """
+    _
+    """
+    siteIds: [String]
+    """
+    –
+    """
+    datasetIds: [String]
+}
+
+"""
+_
+"""
+type PeaksClosestGenes {
+    """
+    _
+    """
+    _id: String
+    """
+    _
+    """
+    name: String
+	"""
+	_
+	"""
+	distanceTo: Int
+    """
+    _
+    """
+    productName: String
+}
+
+type Query {
+    """
+    #### Type
+    Data
+    #### Service
+    HT Peaks
+    #### Name
+    getAllPeaksOfDataset
+    #### Description
+    Gets all peaks docs associated to datasetID
+    #### Example
+    ```json
+    {
+        getAllPeaksOfDataset(datasetId:"")
+        {
+            _id
+            closestGenes {
+                _id
+                name
+                distanceTo
+            }
+            datasetIds
+        }
+    }
+    ```
+    """
+    getAllPeaksOfDataset( 
+    """
+    #### Description
+    Id of the required document in the query
+    #### Required
+    Required
+    """
+    datasetId: String): [Peaks]
+}

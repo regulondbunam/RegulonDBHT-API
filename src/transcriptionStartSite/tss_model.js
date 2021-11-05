@@ -1,0 +1,31 @@
+import mongoose from 'mongoose';
+
+const closestGenesSchema = new mongoose.Schema({
+    _id: String,
+    name: String
+});
+
+const promoterSchema = new mongoose.Schema({
+    _id: String,
+    name: String,
+    strand: String,
+    pos1: Number,
+    sigma: String,
+    confidenceLevel: String
+});
+
+const tssSchema = new mongoose.Schema({
+    _id: String, 
+    chromosome: String,
+    leftEndPosition: Number,
+    rightEndPosition: Number,
+    pos_1: Number,
+    strand: String,
+    closestGenes: [closestGenesSchema],
+    promoter: promoterSchema,
+    datasetIds: [String]
+});
+
+const TranscriptionStartSite = new mongoose.model('ht_transcriptionStartSite', tssSchema, "TranscriptionStartSiteCollection")
+
+export { TranscriptionStartSite }
