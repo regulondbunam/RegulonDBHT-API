@@ -14,7 +14,7 @@ type Dataset {
     """
     _
     """
-    datasetID: String
+    _id: String
     """
     _
     """
@@ -46,7 +46,7 @@ type Dataset {
     """
     _
     """
-    temporalDatasetID: String
+    temporalID: String
     """
     _
     """
@@ -97,6 +97,10 @@ type DatasetPublication {
     _
     """
     pmcid: String
+    """
+    _
+    """
+    abstract: String
 }
 
 """

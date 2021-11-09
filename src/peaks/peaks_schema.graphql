@@ -9,6 +9,10 @@ type Peaks {
     """
     _
     """
+    name: String
+    """
+    _
+    """
     closestGenes: [PeaksClosestGenes]
     """
     _
@@ -34,6 +38,10 @@ type Peaks {
     –
     """
     datasetIds: [String]
+    """
+    _
+    """
+    temporalID: String
 }
 
 """
@@ -51,7 +59,7 @@ type PeaksClosestGenes {
 	"""
 	_
 	"""
-	distanceTo: Int
+	distanceTo: Float
     """
     _
     """
@@ -92,4 +100,37 @@ type Query {
     Required
     """
     datasetId: String): [Peaks]
+    """
+    #### Type
+    Data
+    #### Service
+    HT Peaks
+    #### Name
+    getPeakById
+    #### Description
+    Gets a peak by and ID
+    #### Example
+    ```json
+    {
+        getPeakById(_id:"")
+        {
+            _id
+            closestGenes {
+                _id
+                name
+                distanceTo
+            }
+            datasetIds
+        }
+    }
+    ```
+    """
+    getPeakById( 
+    """
+    #### Description
+    Id of the required document in the query
+    #### Required
+    Required
+    """
+    _id: String): Peaks
 }

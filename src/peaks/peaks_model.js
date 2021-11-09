@@ -9,13 +9,15 @@ const geneSchema = new mongoose.Schema({
 
 const peaksSchema = new mongoose.Schema({
     _id: String, 
+    name: String,
     closestGenes: [geneSchema],
     chromosome: String,
     peakLeftPosition: Number,
     peakRightPosition: Number, 
     score: Number,
     siteIds: [String],
-    datasetIds: [String]
+    datasetIds: [String],
+    temporalID: String
 });
 
 const Peaks = mongoose.model('peaks_ht', peaksSchema, 'peaks');

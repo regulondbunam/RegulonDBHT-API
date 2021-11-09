@@ -20,13 +20,15 @@ const geneSchema = new _mongoose2.default.Schema({
 
 const peaksSchema = new _mongoose2.default.Schema({
     _id: String,
+    name: String,
     closestGenes: [geneSchema],
     chromosome: String,
     peakLeftPosition: Number,
     peakRightPosition: Number,
     score: Number,
     siteIds: [String],
-    datasetIds: [String]
+    datasetIds: [String],
+    temporalID: String
 });
 
 const Peaks = _mongoose2.default.model('peaks_ht', peaksSchema, 'peaks');

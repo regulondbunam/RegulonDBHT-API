@@ -7,7 +7,8 @@ const publicationSchema = new mongoose.Schema({
     authors: [String],
     title: String,
     date: String,
-    pmcid: String
+    pmcid: String,
+    abstract: String
 });
 
 const simpleItemSchema = new mongoose.Schema({
@@ -83,7 +84,7 @@ const summarySchema = new mongoose.Schema({
 });
 
 const htDatasetSchema = new mongoose.Schema({
-    datasetID: String,
+    _id: String,
     publication: publicationSchema,
     objectTested: objectTestedSchema,
     sourceSerie: sourceSerieSchema,
@@ -91,7 +92,7 @@ const htDatasetSchema = new mongoose.Schema({
     linkedDataset: linkedDatasetSchema,
     referenceGenome: String,
     datasetType: String,
-    temporalDatasetID: String,
+    temporalID: String,
     growthConditions: growthConditionsSchema,
     releaseDataControl: releaseDataControlSchema,
     summary: summarySchema,
@@ -99,6 +100,6 @@ const htDatasetSchema = new mongoose.Schema({
     fivePrimeEnrichment: String
 });
 
-const HTDataset = mongoose.model('ht_dataset_datamarts', htDatasetSchema, 'datasetDatamart');
+const HTDataset = mongoose.model('ht_dataset_datamarts', htDatasetSchema, 'dataset');
 
 export { HTDataset };

@@ -27,5 +27,9 @@ const TranscriptionUnit = gql`
   ${fs.readFileSync('./src/transcriptionUnit/transcriptionUnit_schema.graphql').toString()}
 `;
 
+const TranscriptionStartSite = gql`
+  ${fs.readFileSync('./src/TranscriptionStartSite/tss_schema.graphql').toString()}
+`;
+
 /** Exports the merged Schema to the index to construct the GQL Server */
-export const types = mergeTypes([HT_Dataset, commonProperties, HT_Peaks, HT_TF_Binding, AuthorsData, TranscriptionUnit], {all: true});
+export const types = mergeTypes([HT_Dataset, commonProperties, HT_Peaks, HT_TF_Binding, AuthorsData, TranscriptionUnit, TranscriptionStartSite], {all: true});

@@ -5,6 +5,7 @@ import { peaksResolvers } from '../peaks/peaks_resolver';
 import { tfBindingResolvers } from '../tfBinding/tfBinding_resolver'
 import { authorsDataResolvers } from '../authorsData/authorsData_resolver';
 import { transcriptionUnitResolvers } from '../transcriptionUnit/transcriptionUnit_resolver'
+import { transcriptionStartSiteResolvers } from '../transcriptionStartSite/tss_resolver'
 
 /** merges all resolver file and exports them to index */
 export const resolvers = mergeResolvers([
@@ -12,5 +13,6 @@ export const resolvers = mergeResolvers([
     peaksResolvers,
     tfBindingResolvers,
     authorsDataResolvers,
-    transcriptionUnitResolvers
+    transcriptionUnitResolvers,
+    transcriptionStartSiteResolvers
 ]);
