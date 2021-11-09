@@ -1,7 +1,7 @@
 """
 _
 """
-type TranscriptionUnit {
+type HtTranscriptionUnit {
     """
     _
     """
@@ -103,7 +103,7 @@ type Query {
     #### Required
     Required
     """
-    _id: String): TranscriptionUnit
+    _id: String): HtTranscriptionUnit
     
     """
     #### Type
@@ -137,5 +137,5 @@ type Query {
     #### Required
     Required
     """
-    datasetId: String): [TranscriptionUnit]
+    datasetId: String): [HtTranscriptionUnit]
 }

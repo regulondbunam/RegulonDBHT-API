@@ -1,4 +1,4 @@
-type TranscriptionStartSite {
+type HtTSS {
     _id: String
     chromosome: String
     leftEndPosition: Int
@@ -6,7 +6,7 @@ type TranscriptionStartSite {
     pos_1: Int
     strand: String
     tssClosestGenes: TSSClosestGenes
-    promoter: Promoter
+    promoter: TSSPromoter
     datasetIds: [String]
 }
 
@@ -15,16 +15,77 @@ type TSSClosestGenes {
     name: String
 }
 
-type Promoter {
+type TSSPromoter {
     _id: String
     name: String
     strand: String
-    pos1: Number
+    pos1: Int
     sigma: String
     confidenceLevel: String
 }
 
 type Query {
-    getTSSByID(_id: String): TranscriptionStartSite
-    getAllTransUnitsOfDataset(datasetIds: String): [TranscriptionStartSite]
+    """
+    #### Type
+    Data
+    #### Service
+    HT Transcription Start Site
+    #### Name
+    getTUByID
+    #### Description
+    Get TranscriptionStartSite by an id
+    #### Example
+    ```json
+    {
+        getTSSByID(_id:"")
+        {
+            _id
+            chromosome
+            leftEndPosition
+            rightEndPosition
+            datasetIds
+        }
+    }
+    ```
+    """
+    getTSSByID(
+    """
+    #### Description
+    Id of the required document in the query
+    #### Required
+    Required
+    """
+    _id: String): HtTSS
+
+    """
+    #### Type
+    Data
+    #### Service
+    HT Transcription Start Site
+    #### Name
+    getAllTSSOfDataset
+    #### Description
+    Gets all TSS docs associated to datasetID
+    #### Example
+    ```json
+    {
+        getAllTSSOfDataset(datasetId:"")
+        {
+            _id
+            chromosome
+            leftEndPosition
+            rightEndPosition
+            datasetIds
+        }
+    }
+    ```
+    """
+    getAllTSSOfDataset(
+    """
+    #### Description
+    Id of the dataset associated to Transcription Unit
+    #### Required
+    Required
+    """
+    datasetIds: String): [HtTSS]
 }
