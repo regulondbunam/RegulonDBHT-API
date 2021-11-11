@@ -41,7 +41,7 @@ import { transcriptionStartSiteController } from './tss_controller'
 
 export const transcriptionStartSiteResolvers = {
     Query: {
-        getTSSByID: (root, {_id}) => transcriptionStartSiteController.getTUByID(_id),
-        getAllTSSOfDataset: (root, {datasetId}) => transcriptionStartSiteController.getAllTransUnitsOfDataset(datasetId)
+        getTSSByID: (root, {_id}) => transcriptionStartSiteController.getTSSByID(_id),
+        getAllTSSOfDataset: (root, {datasetId}) => transcriptionStartSiteController.getAllTSSOfDataset(datasetId)
     }
 };

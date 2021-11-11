@@ -9,8 +9,8 @@ var _tss_controller = require('./tss_controller');
 
 const transcriptionStartSiteResolvers = exports.transcriptionStartSiteResolvers = {
     Query: {
-        getTSSByID: (root, { _id }) => _tss_controller.transcriptionStartSiteController.getTUByID(_id),
-        getAllTSSOfDataset: (root, { datasetId }) => _tss_controller.transcriptionStartSiteController.getAllTransUnitsOfDataset(datasetId)
+        getTSSByID: (root, { _id }) => _tss_controller.transcriptionStartSiteController.getTSSByID(_id),
+        getAllTSSOfDataset: (root, { datasetId }) => _tss_controller.transcriptionStartSiteController.getAllTSSOfDataset(datasetId)
     }
 }; /**
    # [HT Transcription Start Site Service Resolver]

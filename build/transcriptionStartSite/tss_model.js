@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.TranscriptionStartSite = undefined;
 
-var _mongoose = require('mongoose');
+var _mongoose = require("mongoose");
 
 var _mongoose2 = _interopRequireDefault(_mongoose);
 
@@ -13,7 +13,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const closestGenesSchema = new _mongoose2.default.Schema({
     _id: String,
-    name: String
+    name: String,
+    distanceTo: Number
 });
 
 const promoterSchema = new _mongoose2.default.Schema({
@@ -37,6 +38,6 @@ const tssSchema = new _mongoose2.default.Schema({
     datasetIds: [String]
 });
 
-const TranscriptionStartSite = new _mongoose2.default.model('ht_transcriptionStartSite', tssSchema, "TranscriptionStartSiteCollection");
+const TranscriptionStartSite = new _mongoose2.default.model("ht_transcriptionStartSite", tssSchema, "TranscriptionStartSiteCollection");
 
 exports.TranscriptionStartSite = TranscriptionStartSite;

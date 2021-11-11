@@ -2,7 +2,8 @@ import mongoose from 'mongoose';
 
 const closestGenesSchema = new mongoose.Schema({
     _id: String,
-    name: String
+    name: String,
+    distanceTo: Number
 });
 
 const promoterSchema = new mongoose.Schema({
@@ -26,6 +27,6 @@ const tssSchema = new mongoose.Schema({
     datasetIds: [String]
 });
 
-const TranscriptionStartSite = new mongoose.model('ht_transcriptionStartSite', tssSchema, "TranscriptionStartSiteCollection")
+const TranscriptionStartSite = new mongoose.model("ht_transcriptionStartSite", tssSchema, "TranscriptionStartSiteCollection")
 
 export { TranscriptionStartSite }

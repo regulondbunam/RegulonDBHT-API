@@ -45,7 +45,8 @@ const tfBindingSchema = new _mongoose2.default.Schema({
     strand: String,
     sequence: String,
     datasetIds: [String],
-    temporalID: String
+    temporalID: String,
+    nameCollection: String
 });
 
 const TFBinding = _mongoose2.default.model('tfBinding_ht', tfBindingSchema, 'tfBinding');

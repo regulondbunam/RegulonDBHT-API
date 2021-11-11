@@ -1,26 +1,90 @@
+"""
+_
+"""
 type HtTSS {
+    """
+    _
+    """
     _id: String
+    """
+    _
+    """
     chromosome: String
+    """
+    _
+    """
     leftEndPosition: Int
+    """
+    _
+    """
     rightEndPosition: Int
+    """
+    _
+    """
     pos_1: Int
+    """
+    _
+    """
     strand: String
-    tssClosestGenes: TSSClosestGenes
+    """
+    _
+    """
+    tssClosestGenes: [TSSClosestGenes]
+    """
+    _
+    """
     promoter: TSSPromoter
+    """
+    _
+    """
     datasetIds: [String]
 }
 
+"""
+_
+"""
 type TSSClosestGenes {
+    """
+    _
+    """
     _id: String
+    """
+    _
+    """
     name: String
+    """
+    _
+    """
+    distanceTo: Int
 }
 
+"""
+_
+"""
 type TSSPromoter {
+    """
+    _
+    """
     _id: String
+    """
+    _
+    """
     name: String
+    """
+    _
+    """
     strand: String
+    """
+    _
+    """
     pos1: Int
+    """
+    _
+    """
     sigma: String
+    """
+    _
+    """
     confidenceLevel: String
 }
 
@@ -31,7 +95,7 @@ type Query {
     #### Service
     HT Transcription Start Site
     #### Name
-    getTUByID
+    getTSSByID
     #### Description
     Get TranscriptionStartSite by an id
     #### Example
@@ -83,7 +147,7 @@ type Query {
     getAllTSSOfDataset(
     """
     #### Description
-    Id of the dataset associated to Transcription Unit
+    Id of the dataset associated to Transcription Start Site
     #### Required
     Required
     """

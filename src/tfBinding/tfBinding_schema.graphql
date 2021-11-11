@@ -58,6 +58,10 @@ type DatasetTFBinding {
     _
     """
     temporalID: String
+    """
+    _
+    """
+    nameCollection: String
 }
 
 """
