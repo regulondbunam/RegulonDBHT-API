@@ -1,4 +1,4 @@
-import { TranscriptionTerminationSite } from './tss_model'
+import { TranscriptionTerminationSite } from './tts_model'
 
 class transcriptionTerminationSiteController {
     static async getTTSByID(id) {

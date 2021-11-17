@@ -3,11 +3,11 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.transcriptionStartSiteResolvers = undefined;
+exports.transcriptionTerminationSiteResolvers = undefined;
 
 var _tts_controller = require('./tts_controller');
 
-const transcriptionStartSiteResolvers = exports.transcriptionStartSiteResolvers = {
+const transcriptionTerminationSiteResolvers = exports.transcriptionTerminationSiteResolvers = {
     Query: {
         getTTSByID: (root, { _id }) => _tts_controller.transcriptionTerminationSiteController.getTTSByID(_id),
         getAllTTSOfDataset: (root, { datasetId }) => _tts_controller.transcriptionTerminationSiteController.getAllTTSOfDataset(datasetId)

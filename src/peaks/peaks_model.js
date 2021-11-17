@@ -4,7 +4,7 @@ const geneSchema = new mongoose.Schema({
     _id: String,
     name: String,
     distanceTo: Number,
-    productName: String
+    productName: [String]
 });
 
 const peaksSchema = new mongoose.Schema({

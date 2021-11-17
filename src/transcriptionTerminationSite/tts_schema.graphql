@@ -43,7 +43,7 @@ type HTtranscriptionTerminationSite {
 """
 _
 """
-type TSSClosestGenes {
+type TSSClosestGenes {
     """
     _
     """

@@ -40,7 +40,7 @@ const tfBindingSchema = new _mongoose2.default.Schema({
     transcriptionUnit: transcriptionUniteSchema,
     foundClassicRIs: [foundRIsSchema],
     foundDatasetRIs: [foundRIsSchema],
-    name: String,
+    peakId: String,
     score: Number,
     strand: String,
     sequence: String,

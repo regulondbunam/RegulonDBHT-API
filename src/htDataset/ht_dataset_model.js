@@ -39,7 +39,8 @@ const sourceSerieSchema = new mongoose.Schema({
 const sampleSchema = new mongoose.Schema({
     experimentId: [String],
     controlId: [String],
-    title: String
+    title: String,
+    srrID: String
 });
 
 const linkedDatasetSchema = new mongoose.Schema({
@@ -97,7 +98,9 @@ const htDatasetSchema = new mongoose.Schema({
     releaseDataControl: releaseDataControlSchema,
     summary: summarySchema,
     assemblyGenomeId: String,
-    fivePrimeEnrichment: String
+    fivePrimeEnrichment: String,
+    nlpGrowthConditionsId: String,
+    geneExpressionFiltered: String
 });
 
 const HTDataset = mongoose.model('ht_dataset_datamarts', htDatasetSchema, 'dataset');

@@ -29,7 +29,7 @@ const tfBindingSchema = new mongoose.Schema({
     transcriptionUnit: transcriptionUniteSchema,
     foundClassicRIs: [foundRIsSchema],
     foundDatasetRIs: [foundRIsSchema],
-    name: String,
+    peakId: String,
     score: Number,
     strand: String,
     sequence: String,

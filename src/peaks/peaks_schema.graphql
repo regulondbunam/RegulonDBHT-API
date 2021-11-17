@@ -63,7 +63,7 @@ type PeaksClosestGenes {
     """
     _
     """
-    productName: String
+    productName: [String]
 }
 
 type Query {

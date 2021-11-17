@@ -39,7 +39,7 @@ RegulonDB Team: Lopez Almazo Andres Gerardo
 
 import { transcriptionTerminationSiteController } from './tts_controller'
 
-export const transcriptionStartSiteResolvers = {
+export const transcriptionTerminationSiteResolvers = {
     Query: {
         getTTSByID: (root, {_id}) => transcriptionTerminationSiteController.getTTSByID(_id),
         getAllTTSOfDataset: (root, {datasetId}) => transcriptionTerminationSiteController.getAllTTSOfDataset(datasetId)

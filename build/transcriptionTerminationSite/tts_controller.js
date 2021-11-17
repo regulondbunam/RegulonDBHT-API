@@ -5,14 +5,14 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.transcriptionTerminationSiteController = undefined;
 
-var _tss_model = require("./tss_model");
+var _tts_model = require("./tts_model");
 
 class transcriptionTerminationSiteController {
     static async getTTSByID(id) {
-        return _tss_model.TranscriptionTerminationSite.findOne({ "_id": id });
+        return _tts_model.TranscriptionTerminationSite.findOne({ "_id": id });
     }
     static async getAllTTSOfDataset(datasetId) {
-        return _tss_model.TranscriptionTerminationSite.find({ "datasetIds": datasetId });
+        return _tts_model.TranscriptionTerminationSite.find({ "datasetIds": datasetId });
     }
 }
 

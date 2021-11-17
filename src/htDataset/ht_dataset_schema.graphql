@@ -67,6 +67,14 @@ type Dataset {
     _
     """
     fivePrimeEnrichment: String
+    """
+    _
+    """
+    nlpGrowthConditionsId: String
+    """
+    _
+    """
+    geneExpressionFiltered: String
 }
 
 """
@@ -122,7 +130,7 @@ type ObjectTested {
     """
     _
     """
-    genes: [simpleItemObject]
+    genes: [objectTestedGene]
     """
     _
     """
@@ -135,6 +143,20 @@ type ObjectTested {
     _
     """
     externalCrossReferences: [ExternalCrossReferences]
+}
+
+"""
+_
+"""
+type objectTestedGene {
+    """
+    _
+    """
+    _id: String
+    """
+    _
+    """
+    name: String
 }
 
 """
@@ -187,6 +209,10 @@ type DatasetSample {
     _
     """
     title: String
+    """
+    _
+    """
+    srrId: String
 }
 
 """

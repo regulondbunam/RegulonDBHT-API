@@ -51,7 +51,8 @@ const sourceSerieSchema = new _mongoose2.default.Schema({
 const sampleSchema = new _mongoose2.default.Schema({
     experimentId: [String],
     controlId: [String],
-    title: String
+    title: String,
+    srrID: String
 });
 
 const linkedDatasetSchema = new _mongoose2.default.Schema({
@@ -109,7 +110,9 @@ const htDatasetSchema = new _mongoose2.default.Schema({
     releaseDataControl: releaseDataControlSchema,
     summary: summarySchema,
     assemblyGenomeId: String,
-    fivePrimeEnrichment: String
+    fivePrimeEnrichment: String,
+    nlpGrowthConditionsId: String,
+    geneExpressionFiltered: String
 });
 
 const HTDataset = _mongoose2.default.model('ht_dataset_datamarts', htDatasetSchema, 'dataset');

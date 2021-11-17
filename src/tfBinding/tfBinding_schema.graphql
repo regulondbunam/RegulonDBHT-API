@@ -37,7 +37,7 @@ type DatasetTFBinding {
     """
     _
     """
-    name: String
+    peakId: String
     """
     _
     """
