@@ -57,7 +57,7 @@ type DatasetTFBinding {
     """
     _
     """
-    temporalID: String
+    temporalId: String
     """
     _
     """
@@ -109,7 +109,7 @@ type TFClosestGenes {
 	"""
 	_
 	"""
-	distanceTo: Int
+	distanceTo: Float
 }
 
 type Query {

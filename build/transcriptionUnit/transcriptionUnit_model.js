@@ -29,7 +29,8 @@ const transcriptionUnitSchema = new _mongoose2.default.Schema({
     genes: [geneSchema],
     phantom: Number,
     pseudo: Number,
-    datasetIds: [String]
+    datasetIds: [String],
+    temporalId: String
 });
 
 const TranscriptionUnit = _mongoose2.default.model('ht_transcription_units', transcriptionUnitSchema, 'TranscriptionUnitCollection');

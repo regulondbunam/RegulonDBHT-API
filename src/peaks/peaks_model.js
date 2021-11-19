@@ -17,7 +17,7 @@ const peaksSchema = new mongoose.Schema({
     score: Number,
     siteIds: [String],
     datasetIds: [String],
-    temporalID: String
+    temporalId: String
 });
 
 const Peaks = mongoose.model('peaks_ht', peaksSchema, 'peaks');

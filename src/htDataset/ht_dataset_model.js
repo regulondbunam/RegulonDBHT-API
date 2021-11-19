@@ -21,17 +21,17 @@ const objectTestedSchema = new mongoose.Schema({
     name: String,
     synonyms: [String],
     genes: [simpleItemSchema],
-    summary: String,
+    note: String,
     activeConformations: [String],
     externalCrossReferences: [externalCrossReferencesSchema]
 });
 
 const sourceSerieSchema = new mongoose.Schema({
-    sourceID: String,
+    sourceId: String,
     sourceName: String,
     title: String,
-    platformID: String,
-    platformName: String,
+    platformId: String,
+    platformTitle: String,
     strategy: String,
     method: String
 });
@@ -67,7 +67,7 @@ const growthConditionsSchema = new mongoose.Schema({
 
 const releaseDataControlSchema = new mongoose.Schema({
     date: String,
-    version: Number
+    version: String
 });
 
 const totalOfSchema = new mongoose.Schema({
@@ -93,7 +93,7 @@ const htDatasetSchema = new mongoose.Schema({
     linkedDataset: linkedDatasetSchema,
     referenceGenome: String,
     datasetType: String,
-    temporalID: String,
+    temporalId: String,
     growthConditions: growthConditionsSchema,
     releaseDataControl: releaseDataControlSchema,
     summary: summarySchema,

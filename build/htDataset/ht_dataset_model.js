@@ -33,17 +33,17 @@ const objectTestedSchema = new _mongoose2.default.Schema({
     name: String,
     synonyms: [String],
     genes: [simpleItemSchema],
-    summary: String,
+    note: String,
     activeConformations: [String],
     externalCrossReferences: [_general_model.externalCrossReferencesSchema]
 });
 
 const sourceSerieSchema = new _mongoose2.default.Schema({
-    sourceID: String,
+    sourceId: String,
     sourceName: String,
     title: String,
-    platformID: String,
-    platformName: String,
+    platformId: String,
+    platformTitle: String,
     strategy: String,
     method: String
 });
@@ -79,7 +79,7 @@ const growthConditionsSchema = new _mongoose2.default.Schema({
 
 const releaseDataControlSchema = new _mongoose2.default.Schema({
     date: String,
-    version: Number
+    version: String
 });
 
 const totalOfSchema = new _mongoose2.default.Schema({
@@ -105,7 +105,7 @@ const htDatasetSchema = new _mongoose2.default.Schema({
     linkedDataset: linkedDatasetSchema,
     referenceGenome: String,
     datasetType: String,
-    temporalID: String,
+    temporalId: String,
     growthConditions: growthConditionsSchema,
     releaseDataControl: releaseDataControlSchema,
     summary: summarySchema,

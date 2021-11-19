@@ -41,7 +41,7 @@ type Peaks {
     """
     _
     """
-    temporalID: String
+    temporalId: String
 }
 
 """
