@@ -34,7 +34,7 @@ const tfBindingSchema = new mongoose.Schema({
     strand: String,
     sequence: String,
     datasetIds: [String],
-    temporalID: String,
+    temporalId: String,
     nameCollection: String
 });
 

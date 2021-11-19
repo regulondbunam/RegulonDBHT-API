@@ -46,7 +46,7 @@ type Dataset {
     """
     _
     """
-    temporalID: String
+    temporalId: String
     """
     _
     """
@@ -134,7 +134,7 @@ type ObjectTested {
     """
     _
     """
-    summary: String
+    note: String
     """
     _
     """
@@ -166,7 +166,7 @@ type SourceSerie {
     """
     _
     """
-    sourceID: String
+    sourceId: String
     """
     _
     """
@@ -178,7 +178,7 @@ type SourceSerie {
     """
     _
     """
-    platformID: String
+    platformId: String
     """
     _
     """
@@ -302,7 +302,7 @@ type ReleaseDataControl {
     """
     _
     """
-    version: Float
+    version: String
 }
 
 """
@@ -312,15 +312,15 @@ type DatasetSummary {
     """
     _
     """
-    totalOfPeaks: [totalOf]
+    totalOfPeaks: totalOf
     """
     _
     """
-    totalOfGenes: [totalOf]
+    totalOfGenes: totalOf
     """
     _
     """
-    totalOfTFBS: [totalOf]
+    totalOfTFBS: totalOf
 }
 
 """

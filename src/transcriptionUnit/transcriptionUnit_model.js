@@ -18,7 +18,8 @@ const transcriptionUnitSchema = new mongoose.Schema({
     genes: [geneSchema],
     phantom: Number,
     pseudo: Number,
-    datasetIds: [String]
+    datasetIds: [String],
+    temporalId: String
 });
 
 const TranscriptionUnit = mongoose.model('ht_transcription_units', transcriptionUnitSchema, 'TranscriptionUnitCollection');

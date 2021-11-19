@@ -28,7 +28,7 @@ const peaksSchema = new _mongoose2.default.Schema({
     score: Number,
     siteIds: [String],
     datasetIds: [String],
-    temporalID: String
+    temporalId: String
 });
 
 const Peaks = _mongoose2.default.model('peaks_ht', peaksSchema, 'peaks');

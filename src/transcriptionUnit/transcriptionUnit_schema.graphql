@@ -50,6 +50,10 @@ type HtTranscriptionUnit {
     _
     """
     datasetIds: [String]
+    """
+    _
+    """
+    temporalId: String
 }
 
 """
