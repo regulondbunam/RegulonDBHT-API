@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 const geneSchema = new mongoose.Schema({
     _id: String,
     name: String,
-    bnunmber: String
+    bnumber: String
 });
 
 const transcriptionUnitSchema = new mongoose.Schema({
@@ -22,6 +22,6 @@ const transcriptionUnitSchema = new mongoose.Schema({
     temporalId: String
 });
 
-const TranscriptionUnit = mongoose.model('ht_transcription_units', transcriptionUnitSchema, 'TranscriptionUnitCollection');
+const TranscriptionUnit = mongoose.model('transcriptionUnits', transcriptionUnitSchema, 'transcriptionUnit');
 
 export { TranscriptionUnit }

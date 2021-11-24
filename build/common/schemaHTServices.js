@@ -49,4 +49,4 @@ const TranscriptionTerminationSite = _apolloServerExpress.gql`
 `;
 
 /** Exports the merged Schema to the index to construct the GQL Server */
-const types = exports.types = (0, _mergeGraphqlSchemas.mergeTypes)([HT_Dataset, commonProperties, HT_Peaks, HT_TF_Binding, AuthorsData], { all: true });
+const types = exports.types = (0, _mergeGraphqlSchemas.mergeTypes)([HT_Dataset, commonProperties, HT_Peaks, HT_TF_Binding, AuthorsData, TranscriptionUnit], { all: true });

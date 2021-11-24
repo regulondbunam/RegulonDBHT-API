@@ -13,5 +13,6 @@ export const resolvers = mergeResolvers([
     htDatasetResolvers,
     peaksResolvers,
     tfBindingResolvers,
-    authorsDataResolvers
+    authorsDataResolvers,
+    transcriptionUnitResolvers
 ]);
