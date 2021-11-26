@@ -2,37 +2,77 @@
 
 # Description
 
-[High-level description, describing what exactly software does.]
+API web services to connect RegulonDB High Troughput MongoDB collections. Functional services available:
+
+- Dataset Metada
+- TF Binding Peaks
+- TF Binding Sites
+- Authors Data
+- Transcription Unit
+
+Not listed services:
+- Transcription Start Site
+- Transcription Termination Site
+- Gene Expression 
 
 # Motivation
 
-[Why the software does things the way it does and why it was designed in the first place. What problems are solved by it. Links to publications and comparisons to similar software.]
+In order to mantain same technologies for software with same proposite there was needed a new web service to connect to a new documental database using GraphQL technology, with this web service API it's possible to get data from RegulonDB HT with an application layer using the technology previously mentioned with Javascript.
 
 
 
 # System requirements
 
-[If the software does make high demand on particular resources, then this should be clearly advertised and explained.]
+Required software
+
+- Node JS ^16.13.0
+- NPM ^8.1.4
 
 # Install 
 
-[This may be described in a separate INSTALL file, but the README must then clearly state this.]
+Once the repo is cloned, use this command to install all libraries dependencies of the API
+
+```bash
+$ npm install
+```
+
+After that, use the following command and edit the ".env-sample" file to add credentials to access the MongoDB collections (keeping the variable name) and the ports for GraphQL servers (by default is used port 4003 for ht services).
+
+```bash
+# On Unix
+nano .env-sample
+
+# On Windows
+notepad .\.env-sample
+```
+
+Then use the next command for rename the file to ".env"
+
+```bash
+# On Unix
+mv .env-sample .env
+
+# On Windows
+REN .env-sample .env
+```
 
 
 
 # Quick start
 
-[How the first task can be performed with the software, or, in the more extensive  documentation, a link to the quick start. Outlines how to quickly get started with the software using a basic yet practical example]
+ Just use this command to start RegulonDB GraphQL Closed, Open and Gateway Services:
+
+```
+$ npm start
+```
+
+Now if the GraphQL HT port in .env is not defined, it will take port 4004 (by default) and GraphQL Playgroud for htServices will run at http://localhost:4004/graphql
 
 
 
 # Project website 
 
 [Website where the software is described and allows users to obtain it as well as its documentation.]
-
-# License
-
-[Defines the set of rules and conditions for people who want to use the software.]
 
 # Support contact information
 
@@ -49,11 +89,11 @@
 
 **Documentation**
 
-- [ ] README file
+- [x] README file
 
 **Learnability**
 
-- [ ] Quick start
+- [x] Quick start
 
 **Buildability**
 
@@ -87,8 +127,8 @@
 
 **Changeability**
 
-- [ ] CONTRIBUTING file
-- [ ] Code of Conduct file
+- [x] CONTRIBUTING file
+- [x] Code of Conduct file
 - [ ] Code changes, and their authorship, publicly visible
 
 **Reusability**
