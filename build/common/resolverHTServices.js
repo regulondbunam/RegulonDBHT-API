@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.resolvers = undefined;
 
-var _mergeGraphqlSchemas = require('merge-graphql-schemas');
+var _merge = require('@graphql-tools/merge');
 
 var _ht_dataset_resolver = require('../htDataset/ht_dataset_resolver');
 
@@ -22,5 +22,5 @@ var _tss_resolver = require('../transcriptionStartSite/tss_resolver');
 var _tts_resolver = require('../transcriptionTerminationSite/tts_resolver');
 
 /** merges all resolver file and exports them to index */
-const resolvers = exports.resolvers = (0, _mergeGraphqlSchemas.mergeResolvers)([_ht_dataset_resolver.htDatasetResolvers, _peaks_resolver.peaksResolvers, _tfBinding_resolver.tfBindingResolvers, _authorsData_resolver.authorsDataResolvers, _transcriptionUnit_resolver.transcriptionUnitResolvers]);
+const resolvers = exports.resolvers = (0, _merge.mergeResolvers)([_ht_dataset_resolver.htDatasetResolvers, _peaks_resolver.peaksResolvers, _tfBinding_resolver.tfBindingResolvers, _authorsData_resolver.authorsDataResolvers, _transcriptionUnit_resolver.transcriptionUnitResolvers]);
 /** import each Resolver file */

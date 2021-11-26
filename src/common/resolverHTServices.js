@@ -1,4 +1,4 @@
-import { mergeResolvers } from 'merge-graphql-schemas';
+import { mergeResolvers } from '@graphql-tools/merge';
 /** import each Resolver file */
 import { htDatasetResolvers } from '../htDataset/ht_dataset_resolver';
 import { peaksResolvers } from '../peaks/peaks_resolver';

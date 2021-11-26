@@ -57,7 +57,7 @@ require('dotenv').config();
 conectarDB();
 
 const federatedSchema = buildSubgraphSchema([{
-    typeDefs: _apolloServerExpress.gql`${_schemaHTServices.types}`,
+    typeDefs: _schemaHTServices.typeDefs,
     resolvers: _resolverHTServices.resolvers
 }]);
 
