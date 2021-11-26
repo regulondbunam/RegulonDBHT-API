@@ -1,11 +1,11 @@
 import axios from 'axios';
 
 describe('dataset', () => {
-  test('get dataset with ID DS00022', async () => {
+  test('get dataset with ID RHTECOLITUD00001', async () => {
     const response = await axios.post('http://localhost:4004/graphql', {
       query: `
             query {
-                getDatasetByID(datasetID: "DS00022") {
+                getDatasetByID(datasetID: "RHTECOLITUD00001") {
                 _id
                 publication {
                     pmid
@@ -21,28 +21,22 @@ describe('dataset', () => {
 
     const {data} = response;
     expect(data).toMatchObject({
-        "data": {
-          "getDatasetByID": {
-            "_id": "DS00022",
-            "publication": {
-              "pmid": 23818864,
-              "doi": "10.1371/journal.pgen.1003565",
-              "authors": [
-                "Myers KS",
-                "Yan H",
-                "Ong IM",
-                "Chung D",
-                "Liang K",
-                "Tran F",
-                "Keles S",
-                "Landick R",
-                "Kiley PJ"
-              ],
-              "title": "Genome-scale analysis of escherichia coli FNR reveals complex features of transcription factor binding.",
-              "date": "2013 Jun"
-            }
+      "data": {
+        "getDatasetByID": {
+          "_id": "RHTECOLITUD00001",
+          "publication": {
+            "pmid": 31308523,
+            "doi": "10.1038/s41564-019-0500-z",
+            "authors": [
+              "Ju X",
+              "Li D",
+              "Liu S"
+            ],
+            "title": "Full-length RNA profiling reveals pervasive bidirectional transcription terminators in bacteria.",
+            "date": "2019 Nov"
           }
         }
-      });
+      }
+    });
   });
 });

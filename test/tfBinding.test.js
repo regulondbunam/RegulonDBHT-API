@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-describe('dataset', () => {
-  test('get tfBinding doc with ID [21064,21078,6,+,TTGATATTAGCCAA]', async () => {
+describe('tfBinding', () => {
+  test('get tfBinding doc with ID ECOLIBS000000001', async () => {
     const response = await axios.post('http://localhost:4004/graphql', {
       query: `
             query {
-                getTFBindingById (_id: "[21064,21078,6,+,TTGATATTAGCCAA]") {
+                getTFBindingById (_id: "ECOLIBS000000001") {
                 _id
                 chromosome
                 chrLeftPosition
@@ -18,15 +18,15 @@ describe('dataset', () => {
 
     const {data} = response;
     expect(data).toMatchObject({
-        "data": {
-          "getTFBindingById": {
-            "_id": "[21064,21078,6,+,TTGATATTAGCCAA]",
-            "chromosome": "NC_000913.3",
-            "chrLeftPosition": 21064,
-            "chrRightPosition": 21078,
-            "sequence": "TTGATATTAGCCAA"
-          }
+      "data": {
+        "getTFBindingById": {
+          "_id": "ECOLIBS000000001",
+          "chromosome": "NC_000913.3",
+          "chrLeftPosition": 97103,
+          "chrRightPosition": 97122,
+          "sequence": "TAAAAATGTCGTCATTATC"
         }
-      });
+      }
+    });
   });
 });
