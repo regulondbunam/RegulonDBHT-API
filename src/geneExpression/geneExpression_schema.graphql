@@ -1,0 +1,123 @@
+"""
+_
+"""
+type GeneExpression {
+    """
+    _
+    """
+    _id: String
+    """
+    _
+    """
+    datasetIds: [String]
+    """
+    _
+    """
+    gene: GeneGE
+    """
+    _
+    """
+    count: String
+    """
+    _
+    """
+    tpm: Int
+    """
+    _
+    """
+    fpkm: Int
+}
+
+"""
+_
+"""
+type GeneGe {
+    """
+    _
+    """
+    _id: String
+    """
+    _
+    """
+    name: String
+    """
+    _
+    """
+    synonyms: [String]
+    """
+    _
+    """
+    bnumber: String
+}
+
+type Query {
+    """
+    #### Type
+    Data
+    #### Service
+    HT Gene Expression
+    #### Name
+    getGeneExpressionById
+    #### Description
+    Get GeneExpression doc by an id
+    #### Example
+    ```json
+    {
+        getGeneExpressionById(_id:"")
+        {
+            _id
+            gene {
+                _id
+                name
+                bnumber
+            }
+            tpm
+            datasetIds
+        }
+    }
+    ```
+    """
+    getGeneExpressionById(
+    """
+    #### Description
+    Id of the required document in the query
+    #### Required
+    Required
+    """
+    _id: String): GeneExpression
+
+    """
+    #### Type
+    Data
+    #### Service
+    HT Gene Expression
+    #### Name
+    getAllGeneExpressionOfDataset
+    #### Description
+    Gets all GeneExpression docs associated to datasetID
+    #### Example
+    ```json
+    {
+        getAllGeneExpressionOfDataset(datasetId:"")
+        {
+            _id
+            gene {
+                _id
+                name
+                bnumber
+            }
+            fpkm
+            datasetIds
+        }
+    }
+    ```
+    """
+    getAllGeneExpressionOfDataset(
+    """
+    #### Description
+    Id of the dataset associated to Transcription Unit
+    #### Required
+    Required
+    """
+    datasetId: String): [GeneExpression]
+}
