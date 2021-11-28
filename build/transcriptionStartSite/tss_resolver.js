@@ -23,7 +23,7 @@ const transcriptionStartSiteResolvers = exports.transcriptionStartSiteResolvers 
    ## Usage 
    
    ```javascript
-   import { transcriptionStartSiteController } from './tss_controller'
+   import { transcriptionStartSiteController } from './tss_resolver'
    ```
    
    ## Arguments/Parameters

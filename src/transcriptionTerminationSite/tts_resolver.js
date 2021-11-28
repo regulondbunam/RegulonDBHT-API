@@ -9,7 +9,7 @@ for HT Transcription Termination Site Service]
 ## Usage 
 
 ```javascript
-import { transcriptionTerminationSiteController } from './tts_controller'
+import { transcriptionTerminationSiteController } from './tts_resolver'
 ```
 
 ## Arguments/Parameters

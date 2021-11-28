@@ -23,7 +23,7 @@ const tfBindingResolvers = exports.tfBindingResolvers = {
    ## Usage 
    
    ```javascript
-   import {tfBindingResolvers} from './tfBinding_controller'
+   import {tfBindingResolvers} from './tfBinding_resolver'
    ```
    
    ## Arguments/Parameters

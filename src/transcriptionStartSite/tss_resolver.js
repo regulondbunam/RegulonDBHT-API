@@ -9,7 +9,7 @@ for HT Transcription Start Site Service]
 ## Usage 
 
 ```javascript
-import { transcriptionStartSiteController } from './tss_controller'
+import { transcriptionStartSiteController } from './tss_resolver'
 ```
 
 ## Arguments/Parameters

@@ -18,12 +18,12 @@ const peaksResolvers = exports.peaksResolvers = {
    ## Description
    
    [Resolves the GraphQL Query based on controller's response
-   for HT Dataset Service]
+   for HT Peaks Service]
    
    ## Usage 
    
    ```javascript
-   import {peaksResolvers} from './peaks_controller'
+   import {peaksResolvers} from './peaks_resolver'
    ```
    
    ## Arguments/Parameters
