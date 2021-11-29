@@ -33,11 +33,15 @@ type HTtranscriptionTerminationSite {
     """
     _
     """
-    terminator: TTSTerminator
+    terminators: [TTSTerminator]
     """
     _
     """
     datasetIds: [String]
+    """
+    _
+    """
+    temporalId: String
 }
 
 """

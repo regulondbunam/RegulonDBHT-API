@@ -34,8 +34,9 @@ const TTSSchema = new mongoose.Schema({
     rightEndPosition: Number,
     name: String,
     closestGenes: [ClosestGenesSchema],
-    terminator: TerminatorSchema,
-    datasetIds: [String]
+    terminators: [TerminatorSchema],
+    datasetIds: [String],
+    temporalId: String
 });
 
 const TranscriptionTerminationSite = new mongoose.model('ht_transcription_start_site', TTSSchema, 'TranscriptionTerminationSiteCollection')
