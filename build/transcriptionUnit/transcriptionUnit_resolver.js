@@ -40,7 +40,7 @@ const transcriptionUnitResolvers = exports.transcriptionUnitResolvers = {
    
    ## Category
    
-   "" web service
+   HT web service
    
    ## License
    

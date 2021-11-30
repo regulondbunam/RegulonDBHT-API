@@ -40,7 +40,7 @@ const tfBindingResolvers = exports.tfBindingResolvers = {
    
    ## Category
    
-   "" web service
+   HT web service
    
    ## License
    

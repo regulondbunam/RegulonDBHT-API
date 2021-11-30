@@ -13,7 +13,7 @@ const geneExpressionResolvers = exports.geneExpressionResolvers = {
         getGeneExpressionById: (root, { _id }) => _geneExpression_controller.geneExpressionController.getGeneExpressionById(_id)
     }
 }; /**
-   # [HT Gene Espression Service Resolver]
+   # [HT Gene Expression Service Resolver]
    	
    ## Description
    

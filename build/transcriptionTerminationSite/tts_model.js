@@ -45,8 +45,9 @@ const TTSSchema = new _mongoose2.default.Schema({
     rightEndPosition: Number,
     name: String,
     closestGenes: [ClosestGenesSchema],
-    terminator: TerminatorSchema,
-    datasetIds: [String]
+    terminators: [TerminatorSchema],
+    datasetIds: [String],
+    temporalId: String
 });
 
 const TranscriptionTerminationSite = new _mongoose2.default.model('ht_transcription_start_site', TTSSchema, 'TranscriptionTerminationSiteCollection');

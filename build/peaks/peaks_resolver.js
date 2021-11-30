@@ -40,7 +40,7 @@ const peaksResolvers = exports.peaksResolvers = {
    
    ## Category
    
-   "" web service
+   HT web service
    
    ## License
    
