@@ -29,11 +29,11 @@ type HTtranscriptionTerminationSite {
     """
     _
     """
-    closestGene: [TTSClosestGenes]
+    closestGenes: [TTSClosestGenes]
     """
     _
     """
-    terminators: [TTSTerminator]
+    terminator: [TTSTerminator]
     """
     _
     """
@@ -47,7 +47,7 @@ type HTtranscriptionTerminationSite {
 """
 _
 """
-type TSSClosestGenes {
+type TTSClosestGenes {
     """
     _
     """
@@ -73,11 +73,7 @@ type TTSTerminator {
     """
     _
     """
-    name: String
-    """
-    _
-    """
-    transcriptionUnit: [TTSTransUnit]
+    transcriptionUnits: [TTSTransUnit]
 }
 
 """

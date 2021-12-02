@@ -22,5 +22,5 @@ var _tss_resolver = require('../transcriptionStartSite/tss_resolver');
 var _tts_resolver = require('../transcriptionTerminationSite/tts_resolver');
 
 /** merges all resolver file and exports them to index */
-const resolvers = exports.resolvers = (0, _merge.mergeResolvers)([_ht_dataset_resolver.htDatasetResolvers, _peaks_resolver.peaksResolvers, _tfBinding_resolver.tfBindingResolvers, _authorsData_resolver.authorsDataResolvers, _transcriptionUnit_resolver.transcriptionUnitResolvers]);
+const resolvers = exports.resolvers = (0, _merge.mergeResolvers)([_ht_dataset_resolver.htDatasetResolvers, _peaks_resolver.peaksResolvers, _tfBinding_resolver.tfBindingResolvers, _authorsData_resolver.authorsDataResolvers, _transcriptionUnit_resolver.transcriptionUnitResolvers, _tss_resolver.transcriptionStartSiteResolvers, _tts_resolver.transcriptionTerminationSiteResolvers]);
 /** import each Resolver file */

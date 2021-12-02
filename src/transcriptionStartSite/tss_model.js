@@ -23,11 +23,11 @@ const tssSchema = new mongoose.Schema({
     pos_1: Number,
     strand: String,
     closestGenes: [closestGenesSchema],
-    promoters: [promoterSchema],
+    promoter: [promoterSchema],
     datasetIds: [String],
     temporalId: String
 });
 
-const TranscriptionStartSite = new mongoose.model("ht_transcriptionStartSite", tssSchema, "TranscriptionStartSiteCollection")
+const TranscriptionStartSite = new mongoose.model("ht_transcriptionStartSite", tssSchema, "transcriptionStartSite")
 
 export { TranscriptionStartSite }

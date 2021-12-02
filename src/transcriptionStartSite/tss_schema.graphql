@@ -29,11 +29,11 @@ type HtTSS {
     """
     _
     """
-    tssClosestGenes: [TSSClosestGenes]
+    closestGenes: [TSSClosestGenes]
     """
     _
     """
-    promoter: TSSPromoter
+    promoter: [TSSPromoter]
     """
     _
     """

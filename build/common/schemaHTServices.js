@@ -30,7 +30,7 @@ const TranscriptionStartSite = _fs2.default.readFileSync('./src/TranscriptionSta
 
 const TranscriptionTerminationSite = _fs2.default.readFileSync('./src/TranscriptionTerminationSite/tts_schema.graphql').toString();
 
-const types = [HT_Dataset, HT_Peaks, HT_TF_Binding, AuthorsData, commonProperties, TranscriptionUnit];
+const types = [HT_Dataset, HT_Peaks, HT_TF_Binding, AuthorsData, commonProperties, TranscriptionUnit, TranscriptionStartSite, TranscriptionTerminationSite];
 
 /** Exports the merged Schema to the index to construct the GQL Server */
 const typeDefs = exports.typeDefs = (0, _merge.mergeTypeDefs)(types);

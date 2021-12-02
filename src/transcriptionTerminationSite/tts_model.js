@@ -17,8 +17,7 @@ const TranscriptionUnitSchema = new mongoose.Schema({
 
 const TerminatorSchema = new mongoose.Schema({
     _id: String,
-    name: String,
-    transcriptionUnit: [TranscriptionUnitSchema]
+    transcriptionUnits: [TranscriptionUnitSchema]
 });
 
 const ClosestGenesSchema = new mongoose.Schema({
@@ -33,12 +32,13 @@ const TTSSchema = new mongoose.Schema({
     leftEndPosition: Number, 
     rightEndPosition: Number,
     name: String,
+    strand: String,
     closestGenes: [ClosestGenesSchema],
-    terminators: [TerminatorSchema],
+    terminator: [TerminatorSchema],
     datasetIds: [String],
     temporalId: String
 });
 
-const TranscriptionTerminationSite = new mongoose.model('ht_transcription_start_site', TTSSchema, 'TranscriptionTerminationSiteCollection')
+const TranscriptionTerminationSite = new mongoose.model('ht_transcription_start_site', TTSSchema, 'transcriptionTerminationSite')
 
 export { TranscriptionTerminationSite }

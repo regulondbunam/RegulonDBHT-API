@@ -28,8 +28,7 @@ const TranscriptionUnitSchema = new _mongoose2.default.Schema({
 
 const TerminatorSchema = new _mongoose2.default.Schema({
     _id: String,
-    name: String,
-    transcriptionUnit: [TranscriptionUnitSchema]
+    transcriptionUnits: [TranscriptionUnitSchema]
 });
 
 const ClosestGenesSchema = new _mongoose2.default.Schema({
@@ -44,12 +43,13 @@ const TTSSchema = new _mongoose2.default.Schema({
     leftEndPosition: Number,
     rightEndPosition: Number,
     name: String,
+    strand: String,
     closestGenes: [ClosestGenesSchema],
-    terminators: [TerminatorSchema],
+    terminator: [TerminatorSchema],
     datasetIds: [String],
     temporalId: String
 });
 
-const TranscriptionTerminationSite = new _mongoose2.default.model('ht_transcription_start_site', TTSSchema, 'TranscriptionTerminationSiteCollection');
+const TranscriptionTerminationSite = new _mongoose2.default.model('ht_transcription_start_site', TTSSchema, 'transcriptionTerminationSite');
 
 exports.TranscriptionTerminationSite = TranscriptionTerminationSite;
