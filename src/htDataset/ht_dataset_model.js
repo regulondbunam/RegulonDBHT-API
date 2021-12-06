@@ -40,7 +40,7 @@ const sampleSchema = new mongoose.Schema({
     experimentId: [String],
     controlId: [String],
     title: String,
-    srrID: String
+    srrId: String
 });
 
 const linkedDatasetSchema = new mongoose.Schema({
@@ -62,7 +62,8 @@ const growthConditionsSchema = new mongoose.Schema({
     growthRate: String,
     vesselType: String,
     aerationSpeed: String,
-    mediumSupplements: String
+    mediumSupplements: String,
+    otherTerms: [String]
 });
 
 const releaseDataControlSchema = new mongoose.Schema({

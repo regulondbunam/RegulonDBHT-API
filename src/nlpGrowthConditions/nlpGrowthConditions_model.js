@@ -3,7 +3,8 @@ import mongoose from 'mongoose';
 const nlpGCPropertiesSchema = new mongoose.Schema({
     value: String,
     score: Number,
-    associatedPhrase: String
+    associatedPhrase: String,
+    nameField: String
 });
 
 const additionalPropertiesSchema = new mongoose.Schema({
@@ -26,7 +27,9 @@ const GrowthConditionsSchema = new mongoose.Schema({
     vesselType: [nlpGCPropertiesSchema],
     aerationSpeed: [nlpGCPropertiesSchema],
     mediumSupplements: [nlpGCPropertiesSchema],
-    additionalProperties: [additionalPropertiesSchema]
+    additionalProperties: [additionalPropertiesSchema],
+    datasetIds: String,
+    temporalId: String
 });
 
 const NLPGrowthConditions = new mongoose.model('nlp_growthConditions', GrowthConditionsSchema, 'nlpGrowthConditions');

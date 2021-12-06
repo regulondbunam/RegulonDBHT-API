@@ -9,7 +9,7 @@ var _geneExpression_controller = require("./geneExpression_controller");
 
 const geneExpressionResolvers = exports.geneExpressionResolvers = {
     Query: {
-        getAllGeneExpressionOfDataset: (root, { datasetId }) => _geneExpression_controller.geneExpressionController.getAllGeneExpressionOfDataset(datasetId),
+        getAllGeneExpressionOfDataset: (root, { datasetId, limit, page }) => _geneExpression_controller.geneExpressionController.getAllGeneExpressionOfDataset(datasetId, limit, page),
         getGeneExpressionById: (root, { _id }) => _geneExpression_controller.geneExpressionController.getGeneExpressionById(_id)
     }
 }; /**

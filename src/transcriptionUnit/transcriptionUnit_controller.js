@@ -5,8 +5,9 @@ class transcriptionUnitController {
         console.log(id)
         return TranscriptionUnit.findOne({"_id":id})
     }
-    static async getAllTransUnitsOfDataset(datasetId) {
-        return TranscriptionUnit.find({"datasetIds": datasetId})
+    static async getAllTransUnitsOfDataset(datasetId, limit, page) {
+        const offset = page * limit
+        return TranscriptionUnit.find({"datasetIds": datasetId}).limit(limit).skip(offset)
     }
 }
 

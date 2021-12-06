@@ -12,8 +12,9 @@ class transcriptionUnitController {
         console.log(id);
         return _transcriptionUnit_model.TranscriptionUnit.findOne({ "_id": id });
     }
-    static async getAllTransUnitsOfDataset(datasetId) {
-        return _transcriptionUnit_model.TranscriptionUnit.find({ "datasetIds": datasetId });
+    static async getAllTransUnitsOfDataset(datasetId, limit, page) {
+        const offset = page * limit;
+        return _transcriptionUnit_model.TranscriptionUnit.find({ "datasetIds": datasetId }).limit(limit).skip(offset);
     }
 }
 

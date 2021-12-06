@@ -289,6 +289,10 @@ type HTGrowthCondition{
     _
     """
     mediumSupplements: String
+    """
+    _
+    """
+    otherTerms: [String]
 }
 
 """

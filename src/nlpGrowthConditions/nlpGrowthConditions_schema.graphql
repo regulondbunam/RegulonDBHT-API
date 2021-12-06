@@ -62,6 +62,14 @@ type NLPGrowthConditions {
     _
     """
     additionalProperties: [nlpGCAdditionalProperties]
+    """
+    _
+    """
+    datasetIds: String
+    """
+    _
+    """
+    temporalId: String
 }
 
 """
@@ -80,6 +88,10 @@ type nlpGCProperties {
     _
     """
     associatedPhrase: String
+    """
+    _
+    """
+    nameField: String
 }
 
 """

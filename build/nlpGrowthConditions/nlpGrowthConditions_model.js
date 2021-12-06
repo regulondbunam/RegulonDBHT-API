@@ -14,7 +14,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const nlpGCPropertiesSchema = new _mongoose2.default.Schema({
     value: String,
     score: Number,
-    associatedPhrase: String
+    associatedPhrase: String,
+    nameField: String
 });
 
 const additionalPropertiesSchema = new _mongoose2.default.Schema({
@@ -37,7 +38,9 @@ const GrowthConditionsSchema = new _mongoose2.default.Schema({
     vesselType: [nlpGCPropertiesSchema],
     aerationSpeed: [nlpGCPropertiesSchema],
     mediumSupplements: [nlpGCPropertiesSchema],
-    additionalProperties: [additionalPropertiesSchema]
+    additionalProperties: [additionalPropertiesSchema],
+    datasetIds: String,
+    temporalId: String
 });
 
 const NLPGrowthConditions = new _mongoose2.default.model('nlp_growthConditions', GrowthConditionsSchema, 'nlpGrowthConditions');

@@ -42,7 +42,7 @@ import { geneExpressionController } from "./geneExpression_controller";
 
 export const geneExpressionResolvers = {
     Query: {
-        getAllGeneExpressionOfDataset: (root, {datasetId}) => geneExpressionController.getAllGeneExpressionOfDataset(datasetId),
+        getAllGeneExpressionOfDataset: (root, {datasetId, limit, page}) => geneExpressionController.getAllGeneExpressionOfDataset(datasetId, limit, page),
         getGeneExpressionById: (root, {_id}) => geneExpressionController.getGeneExpressionById(_id)
     },
 };

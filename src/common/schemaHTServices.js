@@ -18,7 +18,19 @@ const TranscriptionStartSite = fs.readFileSync('./src/TranscriptionStartSite/tss
 
 const TranscriptionTerminationSite = fs.readFileSync('./src/TranscriptionTerminationSite/tts_schema.graphql').toString()
 
-const types = [HT_Dataset, HT_Peaks, HT_TF_Binding, AuthorsData, commonProperties, TranscriptionUnit, TranscriptionStartSite, TranscriptionTerminationSite]
+const GeneExpression = fs.readFileSync('./src/geneExpression/geneExpression_schema.graphql').toString()
+
+const types = [
+    HT_Dataset, 
+    HT_Peaks, 
+    HT_TF_Binding, 
+    AuthorsData, 
+    commonProperties, 
+    TranscriptionUnit, 
+    TranscriptionStartSite, 
+    TranscriptionTerminationSite, 
+    GeneExpression
+]
 
 /** Exports the merged Schema to the index to construct the GQL Server */
 export const typeDefs = mergeTypeDefs(types);
