@@ -21,11 +21,15 @@ type GeneExpression {
     """
     _
     """
-    tpm: Int
+    tpm: String
     """
     _
     """
-    fpkm: Int
+    fpkm: String
+    """
+    _
+    """
+    temporalId: String
 }
 
 """
@@ -98,7 +102,7 @@ type Query {
     #### Example
     ```json
     {
-        getAllGeneExpressionOfDataset(datasetId:"")
+        getAllGeneExpressionOfDataset(datasetId:"RHTECOLIGED00295")
         {
             _id
             gene {

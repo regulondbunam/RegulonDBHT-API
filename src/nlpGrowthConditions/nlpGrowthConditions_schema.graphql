@@ -121,7 +121,7 @@ type Query {
     #### Example
     ```json
     {
-        getNLPGrowthConditionById(_id:"")
+        getNLPGrowthConditionById(datasetId:"RHTECOLIGED00295")
         {
             _id
             temperature {
@@ -145,37 +145,5 @@ type Query {
     #### Required
     Required
     """
-    _id: String): NLPGrowthConditions
-
-
-    """
-    #### Type
-    Data
-    #### Service
-    HT NLP Growth Conditions
-    #### Name
-    getAllNLPGrowthConditions
-    #### Description
-    Gets all NLP Growth Conditions
-    #### Example
-    ```json
-    {
-        getAllNLPGrowthConditions
-        {
-            _id
-            temperature {
-                value
-                score
-                associatedPhrase
-            }
-            mediumSupplements{
-                value
-                score
-                associatedPhrase
-            }
-        }
-    }
-    ```
-    """
-    getAllNLPGrowthConditions: [NLPGrowthConditions]
+    datasetId: String): NLPGrowthConditions
 }

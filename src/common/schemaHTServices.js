@@ -1,5 +1,6 @@
 import { mergeTypeDefs } from '@graphql-tools/merge';
 import fs from 'fs';
+import { NLPGrowthConditions } from '../nlpGrowthConditions/nlpGrowthConditions_model';
 
 /** Reading each graphql schema of all services defined and parsing to String */
 const HT_Dataset = fs.readFileSync('./src/htDataset/ht_dataset_schema.graphql').toString()
@@ -20,6 +21,8 @@ const TranscriptionTerminationSite = fs.readFileSync('./src/TranscriptionTermina
 
 const GeneExpression = fs.readFileSync('./src/geneExpression/geneExpression_schema.graphql').toString()
 
+const nlpGrowthConditions = fs.readFileSync('./src/nlpGrowthConditions/nlpGrowthConditions_schema.graphql').toString()
+
 const types = [
     HT_Dataset, 
     HT_Peaks, 
@@ -29,7 +32,8 @@ const types = [
     TranscriptionUnit, 
     TranscriptionStartSite, 
     TranscriptionTerminationSite, 
-    GeneExpression
+    GeneExpression,
+    nlpGrowthConditions
 ]
 
 /** Exports the merged Schema to the index to construct the GQL Server */

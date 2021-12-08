@@ -23,7 +23,8 @@ var _tts_resolver = require('../transcriptionTerminationSite/tts_resolver');
 
 var _geneExpression_resolver = require('../geneExpression/geneExpression_resolver');
 
-/** merges all resolver file and exports them to index */
+var _nlpGrowthConditions_resolver = require('../nlpGrowthConditions/nlpGrowthConditions_resolver');
 
+/** merges all resolver file and exports them to index */
+const resolvers = exports.resolvers = (0, _merge.mergeResolvers)([_ht_dataset_resolver.htDatasetResolvers, _peaks_resolver.peaksResolvers, _tfBinding_resolver.tfBindingResolvers, _authorsData_resolver.authorsDataResolvers, _transcriptionUnit_resolver.transcriptionUnitResolvers, _tss_resolver.transcriptionStartSiteResolvers, _tts_resolver.transcriptionTerminationSiteResolvers, _geneExpression_resolver.geneExpressionResolvers, _nlpGrowthConditions_resolver.nlpGrowthConditionsResolvers]);
 /** import each Resolver file */
-const resolvers = exports.resolvers = (0, _merge.mergeResolvers)([_ht_dataset_resolver.htDatasetResolvers, _peaks_resolver.peaksResolvers, _tfBinding_resolver.tfBindingResolvers, _authorsData_resolver.authorsDataResolvers, _transcriptionUnit_resolver.transcriptionUnitResolvers, _tss_resolver.transcriptionStartSiteResolvers, _tts_resolver.transcriptionTerminationSiteResolvers, _geneExpression_resolver.geneExpressionResolvers]);

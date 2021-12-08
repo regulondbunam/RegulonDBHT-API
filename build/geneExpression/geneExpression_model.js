@@ -22,9 +22,10 @@ const geneExpressionSchema = new _mongoose2.default.Schema({
     _id: String,
     datasetIds: [String],
     gene: geneSchema,
-    count: Number,
-    tpm: Number,
-    fpkm: Number
+    count: String,
+    tpm: String,
+    fpkm: String,
+    temporalId: String
 });
 
 const GeneExpression = _mongoose2.default.model('ht_geneExpression', geneExpressionSchema, "geneExpression");

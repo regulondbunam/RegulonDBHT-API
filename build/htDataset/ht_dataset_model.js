@@ -113,7 +113,8 @@ const htDatasetSchema = new _mongoose2.default.Schema({
     assemblyGenomeId: String,
     fivePrimeEnrichment: String,
     nlpGrowthConditionsId: String,
-    geneExpressionFiltered: String
+    geneExpressionFiltered: String,
+    experimentConditions: String
 });
 
 const HTDataset = _mongoose2.default.model('ht_dataset_datamarts', htDatasetSchema, 'dataset');

@@ -75,6 +75,10 @@ type Dataset {
     _
     """
     geneExpressionFiltered: String
+    """
+    _
+    """
+    experimentCondition: String
 }
 
 """

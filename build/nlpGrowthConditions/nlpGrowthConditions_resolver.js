@@ -9,8 +9,7 @@ var _nlpGrowthConditions_controller = require("./nlpGrowthConditions_controller"
 
 const nlpGrowthConditionsResolvers = exports.nlpGrowthConditionsResolvers = {
     Query: {
-        getAllNLPGrowthConditions: (root, {}) => _nlpGrowthConditions_controller.nlpGrowthConditionsController.getAllNLPGrowthConditions(),
-        getNLPGrowthConditionById: (root, { _id }) => _nlpGrowthConditions_controller.nlpGrowthConditionsController.getNLPGrowthConditionById(_id)
+        getNLPGrowthConditionById: (root, { datasetId }) => _nlpGrowthConditions_controller.nlpGrowthConditionsController.getNLPGrowthConditionById(datasetId)
     }
 }; /**
    # [HT NLP Growth Conditions Service Resolver]
