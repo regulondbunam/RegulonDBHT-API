@@ -34,10 +34,11 @@ const tssSchema = new _mongoose2.default.Schema({
     pos_1: Number,
     strand: String,
     closestGenes: [closestGenesSchema],
-    promoter: promoterSchema,
-    datasetIds: [String]
+    promoter: [promoterSchema],
+    datasetIds: [String],
+    temporalId: String
 });
 
-const TranscriptionStartSite = new _mongoose2.default.model("ht_transcriptionStartSite", tssSchema, "TranscriptionStartSiteCollection");
+const TranscriptionStartSite = new _mongoose2.default.model("ht_transcriptionStartSite", tssSchema, "transcriptionStartSite");
 
 exports.TranscriptionStartSite = TranscriptionStartSite;

@@ -32,7 +32,7 @@ RegulonDB Coexpression web service
 import express from 'express';
 import {ApolloServer, gql} from 'apollo-server-express';
 import rateLimit from 'express-rate-limit';
-import {types} from './common/schemaHTServices';
+import {typeDefs} from './common/schemaHTServices';
 import {resolvers} from './common/resolverHTServices';
 const {buildSubgraphSchema} = require("@apollo/federation");
 import {playgroundTabs} from './config/htPlaygroundOptions';
@@ -43,7 +43,7 @@ require('dotenv').config();
 conectarDB();
 
 const federatedSchema = buildSubgraphSchema([{
-    typeDefs: gql`${types}`,
+    typeDefs: typeDefs,
     resolvers: resolvers
 }]);
 

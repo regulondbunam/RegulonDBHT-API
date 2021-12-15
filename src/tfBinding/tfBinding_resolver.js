@@ -9,7 +9,7 @@ for HT TF Binding Service]
 ## Usage 
 
 ```javascript
-import {tfBindingResolvers} from './tfBinding_controller'
+import {tfBindingResolvers} from './tfBinding_resolver'
 ```
 
 ## Arguments/Parameters
@@ -26,7 +26,7 @@ N/A
 
 ## Category
 
-"" web service
+HT web service
 
 ## License
 
@@ -42,7 +42,7 @@ import { tfBindingController } from "./tfBinding_controller";
 
 export const tfBindingResolvers = {
     Query: {
-        getAllTFBindingOfDataset: (root, {datasetId}) => tfBindingController.getAllTFBindingOfDataset(datasetId),
+        getAllTFBindingOfDataset: (root, {datasetId, limit, page}) => tfBindingController.getAllTFBindingOfDataset(datasetId, limit, page),
         getTFBindingById: (root, {_id}) => tfBindingController.getTFBindingById(_id)
     },
 };

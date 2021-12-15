@@ -1,13 +1,10 @@
-## [Software name]
+## RegulonDB GraphQL API
 
 __Contributors__ 
 
-[Software name] Version [release version] has been developed by RegulonDB team with contributions from the following.
+RegulonDB HT API Version [TBD] has been developed by RegulonDB team with contributions from the following.
 
-- [Full name]] ([@user]()) [contribution description].
-- [Full name]] ([@user]()) [contribution description].
-- [Full name]] ([@user]()) [contribution description]. (Pull Requests [#x](), [#x]()).
-- [Full name]] ([@user]()) [contribution description]. (Pull Requests [#x](), [#x]()).
+- [Andrés Gerardo López Almazo]] ([@andresloal](https://github.com/andresloal)) [Web services maintenance and integration and developed dataset, peaks, tfBinding, authorsData, transcriptionUnit services].
 
 
 

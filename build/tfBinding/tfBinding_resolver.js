@@ -9,7 +9,7 @@ var _tfBinding_controller = require("./tfBinding_controller");
 
 const tfBindingResolvers = exports.tfBindingResolvers = {
     Query: {
-        getAllTFBindingOfDataset: (root, { datasetId }) => _tfBinding_controller.tfBindingController.getAllTFBindingOfDataset(datasetId),
+        getAllTFBindingOfDataset: (root, { datasetId, limit, page }) => _tfBinding_controller.tfBindingController.getAllTFBindingOfDataset(datasetId, limit, page),
         getTFBindingById: (root, { _id }) => _tfBinding_controller.tfBindingController.getTFBindingById(_id)
     }
 }; /**
@@ -23,7 +23,7 @@ const tfBindingResolvers = exports.tfBindingResolvers = {
    ## Usage 
    
    ```javascript
-   import {tfBindingResolvers} from './tfBinding_controller'
+   import {tfBindingResolvers} from './tfBinding_resolver'
    ```
    
    ## Arguments/Parameters
@@ -40,7 +40,7 @@ const tfBindingResolvers = exports.tfBindingResolvers = {
    
    ## Category
    
-   "" web service
+   HT web service
    
    ## License
    

@@ -10,7 +10,7 @@ var _transcriptionUnit_controller = require('./transcriptionUnit_controller');
 const transcriptionUnitResolvers = exports.transcriptionUnitResolvers = {
     Query: {
         getTUByID: (root, { _id }) => _transcriptionUnit_controller.transcriptionUnitController.getTUByID(_id),
-        getAllTransUnitsOfDataset: (root, { datasetId }) => _transcriptionUnit_controller.transcriptionUnitController.getAllTransUnitsOfDataset(datasetId)
+        getAllTransUnitsOfDataset: (root, { datasetId, limit, page }) => _transcriptionUnit_controller.transcriptionUnitController.getAllTransUnitsOfDataset(datasetId, limit, page)
     }
 }; /**
    # [HT Transcription Unit Service Resolver]
@@ -23,7 +23,7 @@ const transcriptionUnitResolvers = exports.transcriptionUnitResolvers = {
    ## Usage 
    
    ```javascript
-   import { transcriptionUnitController } from './transcriptionUnit_controller'
+   import { transcriptionUnitController } from './transcriptionUnit_resolver'
    ```
    
    ## Arguments/Parameters
@@ -40,7 +40,7 @@ const transcriptionUnitResolvers = exports.transcriptionUnitResolvers = {
    
    ## Category
    
-   "" web service
+   HT web service
    
    ## License
    

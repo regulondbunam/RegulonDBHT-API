@@ -4,12 +4,12 @@
 ## Description
 
 [Resolves the GraphQL Query based on controller's response
-for HT Dataset Service]
+for HT Peaks Service]
 
 ## Usage 
 
 ```javascript
-import {peaksResolvers} from './peaks_controller'
+import {peaksResolvers} from './peaks_resolver'
 ```
 
 ## Arguments/Parameters
@@ -26,7 +26,7 @@ N/A
 
 ## Category
 
-"" web service
+HT web service
 
 ## License
 
@@ -42,7 +42,7 @@ import { peaksController } from "./peaks_controller";
 
 export const peaksResolvers = {
     Query: {
-        getAllPeaksOfDataset: (root, {datasetId}) => peaksController.getAllPeaksOfDataset(datasetId),
+        getAllPeaksOfDataset: (root, {datasetId, limit, page}) => peaksController.getAllPeaksOfDataset(datasetId, limit, page),
         getPeakById: (root, {_id}) => peaksController.getPeakById(_id)
     },
 };

@@ -9,7 +9,7 @@ var _peaks_controller = require("./peaks_controller");
 
 const peaksResolvers = exports.peaksResolvers = {
     Query: {
-        getAllPeaksOfDataset: (root, { datasetId }) => _peaks_controller.peaksController.getAllPeaksOfDataset(datasetId),
+        getAllPeaksOfDataset: (root, { datasetId, limit, page }) => _peaks_controller.peaksController.getAllPeaksOfDataset(datasetId, limit, page),
         getPeakById: (root, { _id }) => _peaks_controller.peaksController.getPeakById(_id)
     }
 }; /**
@@ -18,12 +18,12 @@ const peaksResolvers = exports.peaksResolvers = {
    ## Description
    
    [Resolves the GraphQL Query based on controller's response
-   for HT Dataset Service]
+   for HT Peaks Service]
    
    ## Usage 
    
    ```javascript
-   import {peaksResolvers} from './peaks_controller'
+   import {peaksResolvers} from './peaks_resolver'
    ```
    
    ## Arguments/Parameters
@@ -40,7 +40,7 @@ const peaksResolvers = exports.peaksResolvers = {
    
    ## Category
    
-   "" web service
+   HT web service
    
    ## License
    

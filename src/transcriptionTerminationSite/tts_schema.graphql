@@ -29,21 +29,25 @@ type HTtranscriptionTerminationSite {
     """
     _
     """
-    closestGene: [TTSClosestGenes]
+    closestGenes: [TTSClosestGenes]
     """
     _
     """
-    terminator: TTSTerminator
+    terminator: [TTSTerminator]
     """
     _
     """
     datasetIds: [String]
+    """
+    _
+    """
+    temporalId: String
 }
 
 """
 _
 """
-type TSSClosestGenes {
+type TTSClosestGenes {
     """
     _
     """
@@ -69,11 +73,7 @@ type TTSTerminator {
     """
     _
     """
-    name: String
-    """
-    _
-    """
-    transcriptionUnit: [TTSTransUnit]
+    transcriptionUnits: [TTSTransUnit]
 }
 
 """
@@ -168,7 +168,7 @@ type Query {"""
     #### Example
     ```json
     {
-        getAllTTSOfDataset(datasetId:"")
+        getAllTTSOfDataset(datasetId:"RHTECOLITTD00051")
         {
             _id
             chromosome
@@ -186,5 +186,19 @@ type Query {"""
     #### Required
     Required
     """
-    datasetI: String): [HTtranscriptionTerminationSite]
+    datasetId: String,
+    """
+    #### Description
+    defines the page results showed
+    #### Required
+    Optional
+    """
+    limit: Int = 0, 
+    """
+    #### Description
+    select the current result page
+    #### Required
+    Optional
+    """
+    page: Int = 0): [HTtranscriptionTerminationSite]
 }

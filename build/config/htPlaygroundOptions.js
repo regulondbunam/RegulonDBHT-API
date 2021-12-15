@@ -7,8 +7,8 @@ const playgroundTabs = exports.playgroundTabs = {
     tabs: [{
         endpoint: 'graphql',
         name: 'updates',
-        query: `# 20/10/2021
-# Added a first version of HT Services,
+        query: `# 06/12/2021
+# Added a first version of GeneExpression HT Services,
 # This version is for an upcoming release of RegulonDB GraphQL Web Services
 # In case of error or report a bug please contact us
 
@@ -18,11 +18,15 @@ const playgroundTabs = exports.playgroundTabs = {
 # parameters and description
 getDatasetsFromSearch(advancedSearch:"")
     {
-        datasetID
+        _id
         objectTested {
             _id
             name
-            summary
+            note
+        }
+        publication {
+            authors
+            title
         }
     }
 }`
