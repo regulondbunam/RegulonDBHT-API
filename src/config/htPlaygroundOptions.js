@@ -15,12 +15,12 @@ export const playgroundTabs = {
 getDatasetsFromSearch(advancedSearch:"")
     {
         _id
-        objectTested {
+        objectsTested {
             _id
             name
             note
         }
-        publication {
+        publications {
             authors
             title
         }
