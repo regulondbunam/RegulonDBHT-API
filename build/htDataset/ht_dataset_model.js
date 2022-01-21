@@ -38,14 +38,24 @@ const objectTestedSchema = new _mongoose2.default.Schema({
     externalCrossReferences: [_general_model.externalCrossReferencesSchema]
 });
 
-const sourceSerieSchema = new _mongoose2.default.Schema({
+const serieSchema = new _mongoose2.default.Schema({
     sourceId: String,
-    sourceName: String,
-    titles: [String],
+    sourceName: String
+});
+
+const platformsSchema = new _mongoose2.default.Schema({
     platformId: String,
+    platformSource: String
+});
+
+const sourceSerieSchema = new _mongoose2.default.Schema({
+    series: [serieSchema],
+    platforms: [platformsSchema],
     platformTitle: String,
+    title: String,
     strategy: String,
-    method: String
+    method: String,
+    readType: String
 });
 
 const sampleSchema = new _mongoose2.default.Schema({

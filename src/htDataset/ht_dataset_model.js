@@ -26,14 +26,24 @@ const objectTestedSchema = new mongoose.Schema({
     externalCrossReferences: [externalCrossReferencesSchema]
 });
 
-const sourceSerieSchema = new mongoose.Schema({
+const serieSchema = new mongoose.Schema({
     sourceId: String,
-    sourceName: String,
-    titles: [String],
+    sourceName: String
+});
+
+const platformsSchema = new mongoose.Schema({
     platformId: String,
+    platformSource: String,
+});
+
+const sourceSerieSchema = new mongoose.Schema({
+    series: [serieSchema],
+    platforms: [platformsSchema],
     platformTitle: String,
+    title: String,
     strategy: String,
-    method: String
+    method: String,
+    readType: String
 });
 
 const sampleSchema = new mongoose.Schema({
