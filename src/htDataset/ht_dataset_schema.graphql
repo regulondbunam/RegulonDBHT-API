@@ -163,6 +163,9 @@ type objectTestedGene {
     name: String
 }
 
+"""
+_
+"""
 type Serie {
     """
     _
@@ -174,15 +177,22 @@ type Serie {
     sourceName: String
 }
 
+"""
+_
+"""
 type Platform {
     """
     _
     """
-    platformId: String
+    _id: String
     """
     _
     """
-    platformSource: String
+    source: String
+    """
+    _
+    """
+    title: String
 }
 
 """
@@ -196,11 +206,7 @@ type SourceSerie {
     """
     _
     """
-    platforms: [Platform]
-    """
-    _
-    """
-    platformTitle: String
+    platform: Platform
     """
     _
     """

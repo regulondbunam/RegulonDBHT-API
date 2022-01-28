@@ -44,14 +44,14 @@ const serieSchema = new _mongoose2.default.Schema({
 });
 
 const platformsSchema = new _mongoose2.default.Schema({
-    platformId: String,
-    platformSource: String
+    _id: String,
+    source: String,
+    title: String
 });
 
 const sourceSerieSchema = new _mongoose2.default.Schema({
     series: [serieSchema],
-    platforms: [platformsSchema],
-    platformTitle: String,
+    platform: platformsSchema,
     title: String,
     strategy: String,
     method: String,

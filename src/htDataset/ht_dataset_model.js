@@ -32,14 +32,14 @@ const serieSchema = new mongoose.Schema({
 });
 
 const platformsSchema = new mongoose.Schema({
-    platformId: String,
-    platformSource: String,
+    _id: String,
+    source: String,
+    title: String
 });
 
 const sourceSerieSchema = new mongoose.Schema({
     series: [serieSchema],
-    platforms: [platformsSchema],
-    platformTitle: String,
+    platform: platformsSchema,
     title: String,
     strategy: String,
     method: String,
