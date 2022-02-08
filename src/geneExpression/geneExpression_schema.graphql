@@ -52,6 +52,14 @@ type GeneGe {
     _
     """
     bnumber: String
+    """
+    _
+    """
+    leftEndPosition: Int
+    """
+    _
+    """
+    rightEndPosition: Int
 }
 
 type Query {

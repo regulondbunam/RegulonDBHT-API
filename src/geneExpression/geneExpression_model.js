@@ -4,7 +4,9 @@ const geneSchema = new mongoose.Schema({
     _id: String,
     name: String,
     synonyms: [String],
-    bnumber: String
+    bnumber: String,
+    leftEndPosition: Number,
+    rightEndPosition: Number
 });
 
 const geneExpressionSchema = new mongoose.Schema({

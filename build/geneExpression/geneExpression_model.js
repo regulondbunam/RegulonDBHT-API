@@ -15,7 +15,9 @@ const geneSchema = new _mongoose2.default.Schema({
     _id: String,
     name: String,
     synonyms: [String],
-    bnumber: String
+    bnumber: String,
+    leftEndPosition: Number,
+    rightEndPosition: Number
 });
 
 const geneExpressionSchema = new _mongoose2.default.Schema({
