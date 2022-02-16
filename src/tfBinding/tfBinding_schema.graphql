@@ -91,7 +91,7 @@ type RIObjectType {
     """
     _
     """
-    citations: [Citations]
+    citations: [TFBindingCitations]
     """
     _
     """
@@ -101,11 +101,11 @@ type RIObjectType {
 """
 _
 """
-type Citations {
+type TFBindingCitations {
     """
     _
     """
-    evidence: [Evidence]
+    evidence: [TFBindingEvidence]
     """
     _
     """
@@ -115,7 +115,7 @@ type Citations {
 """
 _
 """
-type Evidence {
+type TFBindingEvidence {
     """
     _
     """
