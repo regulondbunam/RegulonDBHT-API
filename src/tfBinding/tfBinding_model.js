@@ -12,13 +12,38 @@ const gene = new mongoose.Schema({
     transcriptionUnits: [transcriptionUniteSchema],
 });
 
+const EvidenceSchema = new mongoose.Schema({
+    id: String,
+    name: String,
+    code: String, 
+    type: String
+});
+
+const PublicationSchema = mongoose.Schema({
+    id: String,
+    authors: [String],
+    citation: String,
+    pmid: String,
+    title: String,
+    url: String,
+    year: Number
+})
+
+const CitationsSchema = new mongoose.Schema({
+    evidence: EvidenceSchema,
+    publication: PublicationSchema
+});
+
 const foundRIsSchema = new mongoose.Schema({
+    _id: String,
     tfbsLeftPosition: Number,
     tfbsRightPosition: Number,
     relativeGeneDistance: Number, 
     relativeTSSDistance: Number,
     strand: String,
-    sequence: String
+    sequence: String,
+    citations: [CitationsSchema],
+    origin: String
 });
 
 const tfBindingSchema = new mongoose.Schema({
@@ -27,8 +52,7 @@ const tfBindingSchema = new mongoose.Schema({
     chrLeftPosition: Number,
     chrRightPosition: Number,
     closestGenes: [gene],
-    foundClassicRIs: [foundRIsSchema],
-    foundDatasetRIs: [foundRIsSchema],
+    foundRIs: [foundRIsSchema],
     peakId: String,
     score: Number,
     strand: String,
