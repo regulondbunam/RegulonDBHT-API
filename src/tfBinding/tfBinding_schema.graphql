@@ -25,7 +25,11 @@ type DatasetTFBinding {
     """
     _
     """
-    foundRIs: [RIObjectType]
+    foundClassicRIs: [RIObjectType]
+    """
+    _
+    """
+    foundDatasetRIs: [RIObjectType]
     """
     _
     """
@@ -63,10 +67,6 @@ type RIObjectType {
     """
     _
     """
-    _id: String
-    """
-    _
-    """
     tfbsLeftPosition: Int
     """
     _
@@ -88,84 +88,6 @@ type RIObjectType {
     _
     """
     sequence: String
-    """
-    _
-    """
-    citations: [TFBindingCitations]
-    """
-    _
-    """
-    origin: String
-}
-
-"""
-_
-"""
-type TFBindingCitations {
-    """
-    _
-    """
-    evidence: [TFBindingEvidence]
-    """
-    _
-    """
-    publications: [Publication]
-}
-
-"""
-_
-"""
-type TFBindingEvidence {
-    """
-    _
-    """
-    id: String
-    """
-    _
-    """
-    name: String
-    """
-    _
-    """
-    code: String
-    """
-    _
-    """
-    type: String
-}
-
-"""
-_
-"""
-type Publication {
-    """
-    _
-    """
-    id: String
-    """
-    _
-    """
-    authors: [String]
-    """
-    _
-    """
-    citation: String
-    """
-    _
-    """
-    pmid: String
-    """
-    _
-    """
-    title: String
-    """
-    _
-    """
-    url: String
-    """
-    _
-    """
-    year: Int
 }
 
 """

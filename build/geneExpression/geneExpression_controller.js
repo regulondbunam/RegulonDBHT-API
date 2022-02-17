@@ -67,7 +67,7 @@ class geneExpressionController {
   }
 
   /** Get all geneExpression documents matching in a advancedSearch query
-   *  @param {String} advSearch the string that need to be parsed to valid BSON format 
+   *  @param {String} advancedSearch the string that need to be parsed to valid BSON format 
    *  for MongoDB Query, must have a format like key[value]
    *  @param {Number} limit the number of results to be showed
    *  @param {Number} page the page to be showed; this is used to calculate how many
