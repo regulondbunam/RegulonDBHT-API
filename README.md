@@ -9,11 +9,11 @@ API web services to connect RegulonDB High Troughput MongoDB collections. Functi
 - TF Binding Sites
 - Authors Data
 - Transcription Unit
-
-Not listed services:
 - Transcription Start Site
 - Transcription Termination Site
 - Gene Expression 
+
+Not listed services:
 
 # Motivation
 
@@ -36,7 +36,7 @@ Once the repo is cloned, use this command to install all libraries dependencies 
 $ npm install
 ```
 
-After that, use the following command and edit the ".env-sample" file to add credentials to access the MongoDB collections (keeping the variable name) and the ports for GraphQL servers (by default is used port 4003 for ht services).
+After that, use the following command and edit the ".env-sample" file to add credentials to access the MongoDB collection (keeping the variable name) and the ports for GraphQL servers (by default is used port 4004 for ht services).
 
 ```bash
 # On Unix
@@ -60,7 +60,7 @@ REN .env-sample .env
 
 # Quick start
 
- Just use this command to start RegulonDB GraphQL Closed, Open and Gateway Services:
+ Just use this command to start RegulonDB HT Services:
 
 ```
 $ npm start
