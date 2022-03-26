@@ -2,6 +2,19 @@
 
 All notable changes in this project will be documented in this file
 
+## [1.3.0](https://github.com/regulondbunam/RegulonDBHT-API/releases/tag/1.3.0) - 2022-03-26
+
+### Update
+- Added new fields for gSelex TFBinding Datasets: cutOff and Notes
+- Added externalReferences object for ChIP-Exo Datasets
+- Fused foundRIs for Dataset and RDB in TFBinding
+- Added positions for genes in GeneExpression docs
+
+### Fixed
+- Solved bugs on libraries for advancedSearch
+
+---
+
 ## [1.2.1](https://github.com/regulondbunam/RegulonDBHT-API/releases/tag/1.2.1) - 2022-02-17
 
 ### Added
