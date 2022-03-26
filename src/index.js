@@ -19,7 +19,7 @@ N/A
 N/A
 
 ## Category
-RegulonDB Coexpression web service
+RegulonDB HT API
 
 ## License
 
