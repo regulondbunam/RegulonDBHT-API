@@ -11,8 +11,6 @@ var _fs = require('fs');
 
 var _fs2 = _interopRequireDefault(_fs);
 
-var _nlpGrowthConditions_model = require('../nlpGrowthConditions/nlpGrowthConditions_model');
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /** Reading each graphql schema of all services defined and parsing to String */
@@ -28,9 +26,9 @@ const commonProperties = _fs2.default.readFileSync('./src/common/common_properti
 
 const TranscriptionUnit = _fs2.default.readFileSync('./src/transcriptionUnit/transcriptionUnit_schema.graphql').toString();
 
-const TranscriptionStartSite = _fs2.default.readFileSync('./src/TranscriptionStartSite/tss_schema.graphql').toString();
+const TranscriptionStartSite = _fs2.default.readFileSync('./src/transcriptionStartSite/tss_schema.graphql').toString();
 
-const TranscriptionTerminationSite = _fs2.default.readFileSync('./src/TranscriptionTerminationSite/tts_schema.graphql').toString();
+const TranscriptionTerminationSite = _fs2.default.readFileSync('./src/transcriptionTerminationSite/tts_schema.graphql').toString();
 
 const GeneExpression = _fs2.default.readFileSync('./src/geneExpression/geneExpression_schema.graphql').toString();
 
